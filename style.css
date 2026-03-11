@@ -43,7 +43,7 @@ a {
 
 /* NAVIGATION BAR */
 .navigation-bar {
-    position: fixed;
+    position: relative;
     top: 30px;
     width: 100%;
     z-index: 1000;
@@ -774,4 +774,100 @@ a {
     color: #666;
     font-size: 15px;
     line-height: 1.5;
+}
+
+/* --- RESPONSIVE STYLES (Add to bottom of style.css) --- */
+
+@media (max-width: 1024px) {
+    .hero-wrapper {
+        flex-direction: column;
+        gap: 50px;
+        margin: 120px 20px 0;
+        text-align: center;
+    }
+
+    .container {
+        align-items: center;
+    }
+
+    .hero-wrapper-2 {
+        flex-direction: column-reverse;
+        margin: 40px 20px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .container-2 {
+        align-items: center;
+    }
+
+    .navigation-bar-right {
+        gap: 20px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        border-width: 5px; /* Saves space on mobile */
+    }
+
+    /* Navbar adjustment */
+    .navigation-bar{
+        position: relative;
+    }
+
+    .navigation-bar-right span {
+        display: none; /* Shows only icons for Home, Portfolio, etc. */
+    }
+
+    .navigation-bar-left, .navigation-bar-right {
+        margin: 0 20px;
+    }
+
+    /* Grid Adjustments */
+    .about-grid, .project-grid {
+        grid-template-columns: 1fr; /* Stacks cards in one column */
+    }
+
+    .about-wrapper, .portfolio-wrapper, .contact-wrapper {
+        padding: 0 20px;
+    }
+
+    .hero-wrapper .container h1{
+        color: white;
+    }
+
+    .hero-wrapper .container h3{
+        color: white;
+    }
+
+    .hero-wrapper-2 .profile-section-2 .links{
+        color: white;
+    }
+
+    .container-2{
+        color: white;
+    }
+
+    /* Contact Page */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form-section {
+        padding: 30px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-right, .footer-socials {
+        text-align: center;
+        justify-content: center;
+    }
 }
